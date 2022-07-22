@@ -2431,7 +2431,7 @@ Status CameraService::connectHelper(const sp<CALLBACK>& cameraCb, const std::str
             "Camera API version %d", packagePid, clientPackageName.c_str(), cameraId.c_str(),
             static_cast<int>(effectiveApiLevel));
 
-    sCurrPackageName = clientPackageName.c_str();
+    sCurrPackageName = clientPackageName;
 
     nsecs_t openTimeNs = systemTime();
 
